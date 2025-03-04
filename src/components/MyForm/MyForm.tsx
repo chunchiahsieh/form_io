@@ -12,9 +12,6 @@ export function MyForm() {
       <h2 className={styles.formTitle}>我的 Form.io 表單</h2>
       <FormBuilder
         onChange={(newSchema: any) => setSchema(newSchema)}
-        options={{
-          language: "zh",  // ✅ 設定語言
-        }}
       />
 
       {/* 按鈕：點擊後輸出 JSON */}
