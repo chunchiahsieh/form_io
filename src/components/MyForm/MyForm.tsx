@@ -1,0 +1,24 @@
+import React, { useState } from "react";
+import { FormBuilder } from "@formio/react";
+import "@formio/js/dist/formio.full.css"; // 確保有載入 CSS
+import styles from "./MyForm.module.css";
+
+export function MyForm() {
+  // 用來存儲表單的 JSON 結構
+  const [schema, setSchema] = useState<any>({});
+///sss
+  return (
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>我的 Form.io 表單</h2>
+      <FormBuilder
+        onChange={(newSchema: any) => setSchema(newSchema)}
+      />
+
+      {/* 按鈕：點擊後輸出 JSON */}
+      <button onClick={() => console.log(schema)}>輸出 JSON</button>
+      
+      {/* 顯示 JSON 結構 */}
+      <pre>{JSON.stringify(schema, null, 2)}</pre>
+    </div>
+  );
+}

@@ -1,8 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
+import { MyForm } from "./components/MyForm";
 import './App.css';
 
 function App() {
+  return (
+    <div>
+      <h1>Form.io React 表單</h1>
+      <MyForm /> {/* 加入 MyForm 組件 */}
+    </div>
+  );
+  /*
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +26,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  );*/
 }
 
 export default App;
